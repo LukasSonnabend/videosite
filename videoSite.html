@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand navbar-dark">
+        <span class="navbar-brand mb-0 h1">NetVideo</span>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Browse
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Home</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Movies</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Series</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Newest</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">My list</a>
+              </div>
+            </li>
+          </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">🔍</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">🕭</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">⛹</a>
+                </li>
+            </ul>
+      </nav>
+        <!-- Start Main View -->
+        <!-- Start Jumbotron -->
+        <div class="mainJumbotron">
+            <div class="mainJumbotronDescription col-sm-12 col-md-6">
+                <span style="text-align: center;"><h2>Love !n the<br>$pektrum</h2></span>
+                <h5>Watch Season 1 now!</h5>
+                <p>3uphor!e, 7i3b35kummer und pe!nl!che St!ll3 – für<br>@utisten ist die Suche nach L!eb3 die u7t!mat!v3<br>H3rau$forderung.</p>
+                <button class="mainJumboButton">Play ▶</button><button class="mainJumboButton">More Info 🛈</button>
+            </div>
+        </div>
+        <!-- End Jumbotron -->
+         <!-- Start Videolists -->
+            <div class="videoListsFirst scrolling-wrapper">
+            <h5>My 7!st</h5>   
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <!-- <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    </div> 
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                </div>
+            </div>
+            <div class="videoLists scrolling-wrapper">
+                <h5>Recommendations</h5>   
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                        <!-- <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                        </div> 
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </div>
+                </div>
+            
+         <!-- End Videolists -->
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+<style>
+
+    .scrolling-wrapper {
+    /* overflow-x: scroll; */
+    overflow-y: hidden;
+    white-space: nowrap;
+    }
+    .card{
+        display: inline-block;
+    }
+    .card:hover{
+        transform: scale(1.1);
+        z-index: 4;
+    }
+    .card {
+        background: black;
+    }
+    
+    
+
+
+    html, body{
+        min-height: 100%;
+    }
+
+    h5 {
+        color: white;
+    }
+    body {
+        background: black;
+    }
+
+    body > nav {
+        position: absolute;
+        z-index: 1;
+    } 
+
+    @media only screen and (max-width: 768px){
+        .mainJumbotron{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 20em;
+        padding-top: 50px;
+        background:  no-repeat url(https://images.unsplash.com/photo-1547248085-bf272dd7cb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
+        box-shadow:inset 0 0 0 2000px hsla(0, 0%, 0%, 0.7);
+        background-size: cover;
+        z-index: 0;
+        color: white;
+    }
+    
+    .mainJumbotronDescription{
+        padding: 20px 20px 20px 10% ;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .videos{
+        display: inline;
+        margin-right: 20px;
+    }
+
+
+    }
+
+    @media only screen and (min-width: 768px) {
+    .mainJumbotron{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 25em;
+    padding-top: 50px;
+    background:  no-repeat url(https://images.unsplash.com/photo-1547248085-bf272dd7cb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
+    background-size: cover;
+    z-index: 0;
+    color: white;
+    }
+
+    .mainJumbotronDescription{
+        padding: 20px 20px 20px 10% ;
+        width: 100%;
+        text-align: left;
+    }
+    }
+
+
+    .mainJumboButton{
+        max-width: 150px;
+        margin-left: 10px;
+        padding: 0.3em 1.5em;
+    }
+
+    .videoListsFirst{
+        margin-top: 20em;
+        padding: 20px 20px 20px 5% ;
+    }
+    .videoLists{
+        padding: 20px 20px 20px 5% ;
+    }
+
+    .dropdown-item, .dropdown-divider, .dropdown-menu {
+        text-align: center;
+        color: white;
+        background: black;
+    }
+
+    .nav-link{
+        color:white;
+    }
+</style>
