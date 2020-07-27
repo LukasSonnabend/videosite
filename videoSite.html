@@ -6,7 +6,7 @@
 <body onLoad="videoList()">
 
     <nav class="navbar navbar-expand navbar-dark">
-        <span class="navbar-brand mb-0 h1">NetVideo</span>
+        <span class="navbar-brand mb-0 h1">Net<span style="color:red">Video</span></span>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,9 +32,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">🕭</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">⛹</a>
-                </li>
+                <!-- Account Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ⛹
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Personal Info</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Movies</a>
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </li>
             </ul>
       </nav>
         <!-- Start Main View -->
@@ -57,8 +66,9 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                     </div> 
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                    <div class="centered">Title</div>
+                    <a href="https://google.com">
+                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    </a>
                 </div>
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
@@ -97,9 +107,15 @@
             </div>
          <!-- End Videolists -->
          <!-- Start Footer -->
-            <footer style="background-color: blueviolet;">
-                <div id="topFooter" class="col-sm-12 col-md-6">
+            <footer>
+                <div id="topFooterLeft" class="col-sm-12 col-md-6">
                     <p>This is my project to create a basic videostreaming frontend</p>
+                </div>
+                <div id="topFooterRight" class="col-sm-12 col-md-6">
+                    <p>Socials</p>
+                    <p>GitHub</p>
+                    <p>Code</p>
+                    
                 </div>
                 <div id="bottomFooter" class="container-fluid">
                     Video Site 2020
@@ -116,6 +132,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 <style>
+    .mainJumbotron{
+        background:  no-repeat url(https://images.unsplash.com/photo-1468857006728-bba1dba0eb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1032&q=80);
+        box-shadow:inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+    }
 
     .scrolling-wrapper {
     overflow-x: hidden;
@@ -133,17 +153,6 @@
         position: relative;
         text-align: center;
         color:black;
-    }
-    /* Centered text */
-    .centered {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-    .centered:hover{
-        display: inline;
     }
 
     .card:hover{
@@ -177,8 +186,6 @@
         width: 100%;
         height: 20em;
         padding-top: 50px;
-        background:  no-repeat url(https://images.unsplash.com/photo-1547248085-bf272dd7cb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
-        box-shadow:inset 0 0 0 2000px hsla(0, 0%, 0%, 0.7);
         background-size: cover;
         z-index: 0;
         color: white;
@@ -206,17 +213,41 @@
         display: none;
     }
 
+    #topFooterLeft{
+        float: left;
+        padding: 0em;
+        text-align: center;
+    }
+
+    #topFooterRight{
+        display: flex;
+        float: right;
+        padding: 0em;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    #bottomFooter{
+        clear: both;
+        text-align: center;
+        width: 100%;
+        background: lightgray;
+    }
 
     }
 
     @media only screen and (min-width: 768px) {
+    /* Dropdown on hover */
+    .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+        display: block;
+    }
+
     .mainJumbotron{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 25em;
+    height: 25.5em;
     padding-top: 50px;
-    background:  no-repeat url(https://images.unsplash.com/photo-1547248085-bf272dd7cb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
     background-size: cover;
     z-index: 0;
     color: white;
@@ -235,6 +266,28 @@
     #rightArrow{
         float: right;
     }
+
+    #topFooterLeft{
+        text-align: center;
+        float: left;
+        padding: 1em;
+    }
+
+    #topFooterRight{
+        display: flex;
+        float: right;
+        padding: 1em;
+        justify-content: space-evenly;
+    }
+
+    #bottomFooter{
+        clear: both;
+        text-align: center;
+        width: 100%;
+        background: lightgray;
+    }
+
+    
 
     }
 
@@ -269,12 +322,7 @@
 
     body > footer{
         padding: 0;
-    }
-
-    #bottomFooter{
-        text-align: center;
-        width: 100%;
-        background: lightgray;
+        background: red;
     }
 
 </style>
@@ -282,7 +330,7 @@
     function videoList(){
         let videoString = "";
         for (let i = 0; i <= 10; i++){
-            videoString += '<div class="card" style="width: 18rem;"><img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap"></div>\n';
+            videoString += '<div class="card" style="width: 18rem;"><a href="#"><img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap"></a></div>\n';
         }
         document.getElementById("vidList1").innerHTML = videoString;
         document.getElementById("vidList2").innerHTML = videoString;
