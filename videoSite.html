@@ -41,6 +41,7 @@
                         ⛹
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <p id="menuUserName"></p>  
                       <a class="dropdown-item" href="#">Personal Info</a>
                       <a class="dropdown-item" href="#">Settings</a>
                     </div>
@@ -62,26 +63,26 @@
          <h5 id="firstTitle">My 7!st</h5>
             <div class="videoListsFirst scrolling-wrapper vidList">   
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2017/12/hikers-1140x760.jpg" alt="Card image cap">
                     <!-- <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                     </div> 
                 <div class="card" style="width: 18rem;">
                     <a href="https://google.com">
-                        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                        <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2015/06/old_steam_locomotive-1140x768.jpg" alt="Card image cap">
                     </a>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2017/02/concrete-1140x760.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2015/04/brno_flypast-1140x758.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2016/04/battle-1140x1140.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                    <img class="card-img-top" src="http://www.bara-art.com/wp-content/uploads/2016/06/golden_beers-1140x760.jpg" alt="Card image cap">
                 </div>
             </div>
             <div id="listScrollBtns">
@@ -103,9 +104,19 @@
                 <div id="vidList2"></div>
             </div>
             <div id="listScrollBtns">
-                <button onclick="scrollVidList('right', 1)">◁</button>  
-                <button id="rightArrow" onclick="scrollVidList('left', 1)">▷</button>   
+                <button onclick="scrollVidList('right', 2)">◁</button>  
+                <button id="rightArrow" onclick="scrollVidList('left', 2)">▷</button>   
             </div>
+
+            <h5>Real List test</h5>
+            <div class="videoLists scrolling-wrapper vidList">
+                <div id="vidList3"></div>
+            </div>
+            <div id="listScrollBtns">
+                <button onclick="scrollVidList('right', 2)">◁</button>  
+                <button id="rightArrow" onclick="scrollVidList('left', 3)">▷</button>   
+            </div>
+
          <!-- End Videolists -->
          <!-- Start Footer -->
             <footer>
@@ -113,9 +124,8 @@
                     <p>This is my project to create a basic videostreaming frontend</p>
                 </div>
                 <div id="topFooterRight" class="col-sm-12 col-md-6">
-                    <p>Socials</p>
+                    <p>Movie Stills taken from IMDB</p>
                     <p>GitHub</p>
-                    <p>Code</p>
                     
                 </div>
                 <div id="bottomFooter" class="container-fluid">
@@ -154,9 +164,11 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     }
+
     .scrolling-wrapper::-webkit-scrollbar{
         display: none;
     }
+
 
     .card{
         display: inline-block;
@@ -189,16 +201,17 @@
         z-index: 1;
     }
     /* removes arrow from account */
-    #accountDropdown:after {
+    #accountDropdown:after, #navbarDropdown:after {
         content: none;
     }
+
 
     @media only screen and (max-width: 768px){
         .mainJumbotron{
         position: absolute;
         top: 0;
         width: 100%;
-        height: 20em;
+        height: 25em;
         padding-top: 50px;
         background-size: cover;
         z-index: 0;
@@ -247,12 +260,17 @@
         width: 100%;
         background: lightgray;
     }
+    
+    #searchForm > input{
+        height: 25px;
+    }
+
 
     }
 
     @media only screen and (min-width: 768px) {
     /* Dropdown on hover */
-    .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+    .dropdown:hover > .dropdown-menu, .btn-group:hover .dropdown-menu{
         display: block;
     }
 
@@ -337,23 +355,74 @@
         background: red;
     }
 
+
+    .card-img-top{
+        height: 190px;
+        width: 286px;
+    }
+    /* Size real Imgs of movies */
+    .realImg{
+        object-fit: cover;
+    }
+
 </style>
 <script>
+
+    var vidJson = JSON.parse(`{  
+    "user": "Lukas",
+    "movies": [
+        {
+            "name": "Star Wars: Episode IX - The Rise of Skywalker",
+            "cover": "https://m.media-amazon.com/images/M/MV5BZjA0Y2RkYTEtNjc3Mi00ZWY2LTg0N2ItMmVjNGMzNTVlYzI4XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
+            "link": "https://www.youtube.com/watch?v=8Qn_spdM5Zg"
+        },
+        {
+            "name": "Sonic the Hedgehog",
+            "cover": "https://m.media-amazon.com/images/M/MV5BNDRmNjFlNzktZTdiNC00MGFhLTkwYzgtNzI2NTY4ZDZiYTVjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
+            "link": "https://www.youtube.com/watch?v=4mW9FE5ILJs"
+        }
+    ]
+    }`)
+
+
     function videoList(){
+        document.getElementById("menuUserName").innerHTML = vidJson["user"];
+
         let videoString = "";
         for (let i = 0; i <= 10; i++){
             videoString += '<div class="card" style="width: 18rem;"><a href="#"><img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap"></a></div>\n';
         }
+
+        let realString ="";
+        let coverImgs = [];
+        let trailerUrls = [];
+
+        //Creates Img Array
+        for (let movie in vidJson["movies"]){
+            coverImgs.push(vidJson["movies"][movie]["cover"]);
+            trailerUrls.push(vidJson["movies"][movie]["link"]);
+        }
+        //create realstring with imgs
+        for (let i = 0; i <= coverImgs.length-1; i++){
+            realString += '<div class="card" style="width: 18rem;"><a href="'+ trailerUrls[i] +'"><img class="card-img-top realImg" src="' + coverImgs[i] +'" alt="Card image cap"></a></div>\n\n';
+        }
+
+
+        console.log(realString);
+
+
+
         document.getElementById("vidList1").innerHTML = videoString;
         document.getElementById("vidList2").innerHTML = videoString;
+        document.getElementById("vidList3").innerHTML = realString;
     }
 
     function scrollVidList(direction, listNo){
         var lists = document.getElementsByClassName("vidList");
             if (direction == "left"){
-            lists[listNo].scrollLeft += 200;
+            lists[listNo].scrollLeft += 280;
             } else {
-            lists[listNo].scrollLeft -= 200;
+            lists[listNo].scrollLeft -= 280;
             }
     }
 
